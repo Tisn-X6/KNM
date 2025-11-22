@@ -4,12 +4,11 @@
 import { GoogleGenerativeAI } from "https://cdn.jsdelivr.net/npm/@google/generative-ai/+esm";
 
 // #########################################################
-// --- THAY ĐỔI Ở ĐÂY: Import Key từ file config.js ---
-import { MY_API_KEY } from "./config.js";
+// 1. Dán chuỗi mã hóa bạn vừa copy ở Bước 1 vào đây
+const ENCODED_KEY = "QUl6YVN5QnFDMnlxZk81T0RqZGxhQjR2LVBqYjhsek96aUhWbG80";
 
-// Gán key đã import vào biến API_KEY để dùng như bình thường
-const API_KEY = MY_API_KEY;
-// ----------------------------------------------------
+// 2. Dùng hàm atob() để giải mã nó thành key thật khi web chạy
+const API_KEY = atob(ENCODED_KEY);
 
 // PHẦN "TRAINING"
 const SYSTEM_PROMPT = `
