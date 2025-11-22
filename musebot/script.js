@@ -4,9 +4,12 @@
 import { GoogleGenerativeAI } from "https://cdn.jsdelivr.net/npm/@google/generative-ai/+esm";
 
 // #########################################################
-// DÁN API KEY HỢP LỆ CỦA BẠN VÀO ĐÂY
-const API_KEY = "AIzaSyAwN3INO7LF9TEW7a8iz1NoIpYF-K8iipw"; 
-// #########################################################
+// --- THAY ĐỔI Ở ĐÂY: Import Key từ file config.js ---
+import { MY_API_KEY } from "./config.js";
+
+// Gán key đã import vào biến API_KEY để dùng như bình thường
+const API_KEY = MY_API_KEY;
+// ----------------------------------------------------
 
 // PHẦN "TRAINING"
 const SYSTEM_PROMPT = `
