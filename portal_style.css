@@ -1,0 +1,132 @@
+/* Reset cơ bản */
+* { box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* THAY ĐỔI Ở ĐÂY: */
+    align-items: flex-end; /* Đẩy nội dung xuống ĐÁY */
+    padding-bottom: 100px; /* Cách lề dưới 100px cho đẹp (bạn có thể chỉnh số này) */
+    /* ---------------- */
+    /* --- ẢNH NỀN --- */
+    /* Dùng lớp phủ cực mỏng màu đen để chữ trắng nổi bật */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                      url('./musebot/danamuse.png'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    /* Màu chữ trắng */
+    color: white;
+}
+
+.portal-container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Giới hạn chiều rộng giống điện thoại */
+    padding: 20px;
+}
+
+/* --- PHẦN TIÊU ĐỀ --- */
+.title-group {
+    margin-bottom: 60px; /* Cách xa nút bấm một chút */
+    /* Tạo hiệu ứng chữ in trên tường */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.title-group h1 {
+    font-size: 2.2em; /* Chữ to */
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.title-group h2 {
+    font-size: 1.2em; /* Chữ nhỏ bên dưới */
+    font-weight: 400;
+    margin: 5px 0 0 0;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- PHẦN NÚT BẤM (Icon Wrapper) --- */
+.icon-wrapper {
+    display: flex;
+    flex-direction: column; /* QUAN TRỌNG: Xếp dọc */
+    gap: 20px; /* Khoảng cách giữa 2 nút */
+    align-items: center;
+}
+
+/* --- STYLE CHO TỪNG NÚT --- */
+.app-choice {
+    text-decoration: none;
+    color: #333; /* Chữ màu đen/xám đậm cho dễ đọc trên nền kính */
+    
+    /* Hiệu ứng kính mờ (Glassmorphism) */
+    background-color: rgba(255, 255, 255, 0.2); /* Trắng trong suốt */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    
+    width: 100%; /* Rộng 100% container */
+    padding: 15px 20px;
+    border-radius: 50px; /* Bo tròn hình viên thuốc */
+    
+    display: flex;
+    align-items: center; /* Căn giữa icon và chữ */
+    gap: 20px;
+    
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.app-choice:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.02);
+}
+
+/* Vòng tròn bao quanh Logo */
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.icon-circle img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+/* Tên Ứng dụng */
+.app-name {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: white; /* Đổi thành màu trắng cho nổi trên nền ảnh */
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* --- RIÊNG CHO DI ĐỘNG --- */
+@media screen and (max-width: 768px) {
+    body {
+        /* Căn ảnh lên trên để thấy không gian đẹp hơn trên điện thoại */
+        background-position: center top; 
+    }
+    
+    .title-group {
+        margin-top: 50px; /* Đẩy chữ xuống một chút */
+    }
+}
+
+
