@@ -257,7 +257,6 @@ const sampleQuestions = [
     "Địa chỉ bảo tàng ở đâu?",
     "Giới thiệu về Mộ chum",
     "Tóm tắt văn hóa Sa Huỳnh",
-    "Súng thần công là gì?",
     "Lịch sử tên gọi Đà Nẵng"
 ];
 
