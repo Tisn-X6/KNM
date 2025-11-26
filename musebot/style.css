@@ -275,3 +275,39 @@ h1 {
         box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
 }
+
+/* --- KHU VỰC GỢI Ý CÂU HỎI --- */
+#suggestion-area {
+    display: flex;
+    gap: 10px; /* Khoảng cách giữa các nút */
+    padding: 10px 15px;
+    overflow-x: auto; /* Cho phép cuộn ngang nếu nhiều nút */
+    white-space: nowrap; /* Không cho xuống dòng */
+    
+    /* Ẩn thanh cuộn cho đẹp */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE/Edge */
+}
+#suggestion-area::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+/* --- NÚT GỢI Ý (CHIP) --- */
+.suggestion-chip {
+    background-color: rgba(255, 255, 255, 0.8); /* Trắng mờ */
+    border: 1px solid #6D4C41; /* Viền màu Nâu bảo tàng */
+    color: #6D4C41; /* Chữ màu Nâu */
+    padding: 8px 15px;
+    border-radius: 20px; /* Bo tròn hình viên thuốc */
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+    flex-shrink: 0; /* Đảm bảo nút không bị co lại */
+}
+
+.suggestion-chip:hover {
+    background-color: #6D4C41;
+    color: white;
+    transform: translateY(-2px); /* Nhảy lên nhẹ khi di chuột */
+}

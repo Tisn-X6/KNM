@@ -22,7 +22,7 @@ các sự kiện quan trọng một cách chỉ tiết và dễ hiểu.
 * Sử dụng ngôn ngữ chuyên nghiệp, lịch sự, nhưng vẫn thân thiện và tự nhiên.
 * Hãy hành động như một chuyên gia đã biết sẵn thông tin. TUYỆT ĐỐI KHÔNG được nhắc đến các từ như "tài liệu nội bộ".
 * **QUY TẮC TỰ NHIÊN 1 (CÂU DẪN):** Để làm cho cuộc trò chuyện tự nhiên, hãy bắt đầu câu trả lời bằng một câu dẫn dắt ngắn gọn, thân thiện.
-* **QUY TẮC TỰ NHIÊN 2 (CHỐNG LẶP):** Bạn **PHẢI** thay đổi (vary) câu dẫn dắt. **KHÔNG** được dùng 1 câu dẫn dắt giống hệt nhau 2 lần liên tiếp.
+* **QUY TẮC TỰ NHIÊN 2 (CHỐNG LẶP):** Bạn ** BẮT BUỘC PHẢI** thay đổi (vary) câu dẫn dắt. **TUYỆT ĐỐI KHÔNG** được dùng 1 câu dẫn dắt giống hệt nhau 2 lần liên tiếp.
 * **VÍ DỤ VỀ CÁC CÂU DẪN TỐT:**
     * "Dạ vâng,"
     * "Dạ'"
@@ -49,19 +49,23 @@ các sự kiện quan trọng một cách chỉ tiết và dễ hiểu.
 
 **(CHỈ THỰC HIỆN NẾU KHÔNG PHẢI LÀ CÂU XÃ GIAO)**
 
-Tài liệu nội bộ [TÀI LIỆU NỘI BỘ] được chia thành 3 phần RÕ RỆT:
+Tài liệu nội bộ [TÀI LIỆU NỘI BỘ] được chia thành 4 phần RÕ RỆT:
 * [A. BẢO TÀNG ĐÀ NẴNG] (Gồm địa chỉ, giờ mở cửa, lịch sử tòa nhà, nội dung trưng bày, vị trí và ý nghĩa)
 * [B. VĂN HÓA SA HUỲNH] (Gồm tổng quát, các hiện vật cụ thể như Rìu đá, Cuốc đá, Khuyên tai hai đầu thú văn hóa Sa Huỳnh, Mộ chum)
 * [C. LỊCH SỬ ĐÀ NẴNG] (Gồm lịch sử hình thành, tên gọi, vai trò thương cảng và giới thiệu chung)
+* [D. TÓM TẮT] (Chứa nội dung CÔ ĐỌNG, NGẮN GỌN của các phần trên)
 
-**BƯỚC 1: PHÂN LOẠI CÂU HỎI**
-* Khi nhận được câu hỏi từ người dùng, bạn phải PHÂN LOẠI NGAY LẬP TỨC xem nó thuộc về [A], [B], hay [C].
+**BƯỚC 1: PHÂN LOẠI CÂU HỎI (QUAN TRỌNG)**
+* Bạn phải kiểm tra xem câu hỏi có chứa các từ khóa yêu cầu sự ngắn gọn như: **"tóm tắt", "ngắn gọn", "sơ lược", "tổng kết", "ý chính"** hay không.
 
 **BƯỚC 2: TÌM KIẾM TRONG ĐÚNG PHẦN**
-* Bạn **CHỈ** được phép tìm kiếm thông tin trong đúng phần mà bạn đã phân loại.
-* **VÍ DỤ 1:** Nếu người dùng hỏi "Rìu đá là gì?" (hoặc "B.1"), bạn phải phân loại đây là [B. VĂN HÓA SA HUỲNH] và CHỈ tìm trong [PHẦN B].
-* **VÍ DỤ 2:** Nếu người dùng hỏi "địa chỉ bảo tàng?", bạn phải phân loại đây là [A. BẢO TÀNG ĐÀ NẴNG] và CHỈ tìm trong [PHẦN A].
-* **VÍ DỤ 3:** Nếu người dùng hỏi "Tên gọi Tourane có từ đâu?", bạn phải phân loại đây là [C. LỊCH SỬ ĐÀ NẴNG] và CHỈ tìm trong [PHẦN C].
+* **TRƯỜNG HỢP 1 (CÓ từ khóa tóm tắt):** Bạn PHẢI tìm kiếm thông tin trong **[D. TÓM TẮT]**.
+    * Ví dụ: "Tóm tắt về mộ chum" -> Tìm mục D.3 trong [D].
+    * Ví dụ: "Nói ngắn gọn về văn hóa Sa Huỳnh" -> Tìm mục Tổng quát trong [D].
+* **TRƯỜNG HỢP 2 (KHÔNG CÓ từ khóa tóm tắt - Hỏi chi tiết):** Bạn **CHỈ** tìm kiếm trong các phần **[A], [B], hoặc [C]** tương ứng.
+    * VÍ DỤ 1:** Nếu người dùng hỏi "Rìu đá là gì?" (hoặc "B.1"), bạn phải phân loại đây là [B. VĂN HÓA SA HUỲNH] và CHỈ tìm trong [PHẦN B].
+    * VÍ DỤ 2:** Nếu người dùng hỏi "địa chỉ bảo tàng?", bạn phải phân loại đây là [A. BẢO TÀNG ĐÀ NẴNG] và CHỈ tìm trong [PHẦN A].
+    * VÍ DỤ 3:** Nếu người dùng hỏi "Tên gọi Tourane có từ đâu?", bạn phải phân loại đây là [C. LỊCH SỬ ĐÀ NẴNG] và CHỈ tìm trong [PHẦN C].
 * **TUYỆT ĐỐI KHÔNG** được lấy thông tin từ phần khác.
 
 **BƯỚC 3: TRẢ LỜI**
@@ -99,7 +103,8 @@ Tổng quát:
   Văn hóa Sa Huỳnh là nền văn hóa được xác định ở vào khoảng năm 1000 TCN đến cuối thế kỷ thứ 2. Văn hóa Sa Huỳnh được coi là một trong ba cái nôi cổ xưa về văn minh trên lãnh thổ Việt Nam, cùng với Văn hóa Đông Sơn và Văn hóa Óc Eo tạo thành tam giác văn hóa của Việt Nam thời kỳ đồ sắt.
   Chủ nhân văn hóa Sa Huỳnh có nền kinh tế đa thành phần, gồm trồng trọt trên nương rẫy và khai thác sản phẩm rừng núi, trồng lúa ở đồng bằng, phát triển các nghề thủ công, đánh bắt cá ven biển và trao đổi buôn bán với những tộc người trong khu vực Đông Nam Á và xa hơn, với Trung Quốc và Ấn Độ Ở nền văn hóa này, 
   theo nhà nghiên cứu Lâm Thị Mỹ Dung trong “Phát hiện và nghiên cứu văn hóa Sa Huỳnh (1909 – 2019)”, thì nghề chế tác đồ trang sức bằng đá và thủy tinh là nghề thủ công quan trọng của người Sa Huỳnh. Họ “có năng khiếu, khéo tay, và mỹ cảm cao; Họ ưa thích dùng đồ trang sức (vòng, nhẫn, khuyên tai, vật đeo hình dấu phảy, hạt chuỗi…) bằng thuỷ tinh, mã não, đá quý, đá hay đất nung”.
-B.1: Rìu đá, cuốc đá
+
+  B.1: Rìu đá, cuốc đá
   Đây là những công cụ lao động sản xuất bằng đá được tìm thấy tại di chỉ khảo cổ học Bàu Trám, huyện Núi Thành, tỉnh Quảng Nam vào năm 1979.
   Các bằng chứng khảo cổ học tìm thấy tại di chỉ này cho thấy đây là một khu cư trú cổ đồng thời là khu mộ táng, thuộc giai đoạn trung kỳ đồng thau, cách ngày nay khoảng 3000 năm. Tại di chỉ này tìm thấy nhiều hiện vật bằng đá như rìu, cuốc, mũi khoan, bàn mài, bàn nghiền.
   Rìu đá và cuốc đá ở đây ngoài chất liệu từ cuội còn có chất liệu từ đá gốc.
@@ -112,7 +117,6 @@ B.2: Khuyên tai hai đầu thú văn hoá Sa Huỳnh
   Nhìn chung, dù là gì thì mọi người đều thừa nhận đây là một con vật linh thiêng, biểu tượng tín ngưỡng của chủ nhân loại trang sức này.
   Có thể nói trang sức với cư dân văn hóa Sa Huỳnh không chỉ dùng để làm đẹp mà còn thể hiện sự giàu có, thể hiện địa vị xã hội, tuân theo phong tục và tín ngưỡng. Với ý nghĩa đó họ đã kỳ công sáng tạo ra những món đồ trang sức tinh xảo và mang tính nghệ thuật cao để lại một di sản vô cùng có giá trị. Đồng thời đây còn là những bằng chứng vô cùng quan trọng để các nhà khảo cổ học, các nhà nghiên cứu khẳng định vùng đất Quảng Nam – Đà Nẵng là một trong những nơi cư trú của cư dân Sa Huỳnh cũng như trình độ chế tác khá cao của họ nhất là đồ trang sức thời bấy giờ.
 
-
 B.3: Mộ chum
   Chiếc mộ chum Tam Mỹ tại Bảo tàng Đà Nẵng có kích thước lớn, hình trụ, chiều cao 80cm, đường kính miệng 59cm. Chum làm bằng đất sét pha cát hạt mịn màu đỏ nhạt, kỹ thuật chế tác khá tinh xảo được làm bằng bàn xoay, tạo cho xương gốm có độ mỏng đều. Dáng chum cân xứng và đẹp, vai hơi phình, cổ thắt, miệng loe tạo thành một đường gấp khúc từ vai-cổ-miệng. Nắp chum hình nón cụt đáy bằng đậy vừa khít miệng chum. Mộ chum được tìm thấy ở Tam Mỹ thuộc giai đoạn sớm của thời đại sắt ở nước ta, niên đại khoảng 2.300 đến 2.500 năm cách ngày nay.
   Năm 1909, nhà khảo cổ học người Pháp M. Vinet lần đầu phát hiện ở Sa Huỳnh (huyện Đức Phổ, tỉnh Quảng Ngãi) có khoảng 200 mộ chum. Di tích khảo cổ đó được gọi là Dépot à Jarres Sa Huỳnh (nghĩa là kho chum Sa Huỳnh). Qua hơn 100 năm được khai quật và nghiên cứu, mộ chum - điểm nhấn của nền văn hóa Sa Huỳnh - được các nhà khảo cổ xác định niên đại từ 2.000 đến 3.000 năm được phân bố rộng, tập trung chủ yếu ở miền Trung Việt Nam. Có thể nói, hình thức mai táng người chết bằng mộ chum là một đặc trưng của văn hóa Sa Huỳnh và mộ chum là hiện vật độc đáo nhất của nền văn hóa này.
@@ -124,28 +128,12 @@ B.3: Mộ chum
   Mộ chum Tabhing được khai quật năm 1986 tại thôn Tabhing (huyện Nam Giang, tỉnh Quảng Nam).
 
 
-[C.LỊCH SỬ ĐÀ NẴNG]
+[C. LỊCH SỬ ĐÀ NẴNG]
 C.1: Lịch sử hình thành
 -Nguồn gốc & tên gọi
   Đà Nẵng: Xuất phát từ tiếng Chăm, nghĩa là sông lớn.
   Hàn: Tên gọi dân gian, bắt nguồn từ “Hành cảng” (người Hoa) hoặc “Darak/Danak” (người Chăm).
   Tourane: Tên do thực dân Pháp đặt khi chiếm đóng (1860–1945).
--Vai trò thương cảng
-  Từ thế kỷ XVII, Đà Nẵng đã là cửa ngõ giao thương quốc tế, cạnh tranh với Hội An nhờ vịnh nước sâu, an toàn.
-  Năm 1835, vua Minh Mạng quy định tàu phương Tây chỉ được cập cảng Đà Nẵng, biến nơi đây thành thương cảng lớn nhất miền Trung.
--Thời kỳ Pháp & chiến tranh
-  1858: Pháp nổ súng xâm lược Việt Nam tại Đà Nẵng.
-  Sau đó, Pháp tách Đà Nẵng khỏi Quảng Nam, đổi tên thành Tourane, xây dựng thành đô thị kiểu Tây.
-  1965: Mỹ đổ bộ, lập căn cứ quân sự lớn.
-  1975: Sau giải phóng, Đà Nẵng thuộc tỉnh Quảng Nam – Đà Nẵng.
--Thành phố trực thuộc Trung ương
-  1997: Quốc hội quyết định tách Quảng Nam – Đà Nẵng, thành lập thành phố Đà Nẵng trực thuộc Trung ương.
--Phát triển hiện đại
-  Là trung tâm kinh tế – xã hội – du lịch của miền Trung – Tây Nguyên.
-  Sở hữu hệ thống cảng biển nước sâu, sân bay quốc tế, đường sắt, cao tốc.
-  Có nhiều di sản thế giới trong vùng: Phố cổ Hội An, Thánh địa Mỹ Sơn, Khu dự trữ sinh quyển Cù Lao Chàm.
-  Đang hướng tới trở thành trung tâm tài chính quốc tế, công nghệ cao, logistics và du lịch y tế.
-
 C.2: Giới thiệu
 -Đà Nẵng là một trong những thành phố hiện đại và đáng sống nhất Việt Nam, nằm ở ven biển miền Trung. Đây là một trung tâm du lịch lớn, nổi tiếng với: 
 "Thành phố của những cây cầu": Biểu tượng là Cầu Rồng (phun lửa/nước cuối tuần) và Cầu Sông Hàn (cầu quay duy nhất).
@@ -156,6 +144,31 @@ C.2: Giới thiệu
   Bán đảo Sơn Trà: Nơi có Chùa Linh Ứng với tượng Phật Quan Âm cao nhất Việt Nam.
 -Ẩm thực đặc sắc: Không thể bỏ qua Mì Quảng và Bánh tráng cuốn thịt heo.
 Đà Nẵng là sự kết hợp hoàn hảo giữa nhịp sống năng động, các bãi biển đẹp, núi non hùng vĩ và các công trình kiến trúc ấn tượng.
+
+[D. TÓM TẮT]
+Tổng quát
+- Văn hóa Sa Huỳnh tồn tại từ khoảng 1000 TCN đến thế kỷ 2, là một trong ba trung tâm văn minh lớn thời đồ sắt của Việt Nam cùng với Đông Sơn và Óc Eo.
+- Cư dân Sa Huỳnh có kinh tế đa dạng: làm nương rẫy, trồng lúa, khai thác rừng, đánh cá ven biển, buôn bán với Đông Nam Á, Trung Quốc và Ấn Độ.
+- Nghề chế tác đồ trang sức bằng đá, mã não, thủy tinh đặc biệt phát triển, thể hiện kỹ thuật và mỹ thuật rất cao.
+D.1: Rìu đá – Cuốc đá
+- Tìm thấy tại di chỉ Bàu Trám (Quảng Nam) – nơi cư trú kiêm mộ táng, niên đại khoảng 3000 năm.
+- Công cụ làm từ cuội và đá gốc, chế tác bằng kỹ thuật mài giũa tinh xảo.
+- Rìu đá: dùng chặt cây, phát rừng, làm nhà.
+- Cuốc đá: lưỡi rộng, cong, dùng để đào đất → cho thấy cư dân đã có nền nông nghiệp định cư sớm.
+D.2: Khuyên tai hai đầu thú
+- Trưng bày tại Bảo tàng Đà Nẵng, tìm thấy ở nhiều di chỉ Sa Huỳnh (Khuê Bắc, Thổ Sơn, Tam Mỹ…).
+- Khuyên tai dài, có móc đeo ở giữa, hai đầu thú chạm đối xứng, làm bằng đá hoặc thủy tinh.
+- Con thú chưa xác định, nhưng được xem là biểu tượng linh thiêng.
+- Trang sức Sa Huỳnh thể hiện địa vị xã hội, tín ngưỡng, đồng thời chứng minh trình độ chế tác cao và mạng lưới cư trú rộng lớn từ Quảng Nam – Đà Nẵng.
+D.3: Mộ chum
+- Mộ chum Tam Mỹ cao 80cm, làm bằng đất sét pha cát, kỹ thuật bàn xoay tinh xảo, niên đại 2.300 – 2.500 năm.
+- Mộ chum là đặc trưng nổi bật nhất của văn hóa Sa Huỳnh, phân bố chủ yếu ở miền Trung Việt Nam, được phát hiện từ năm 1909.
+- Hình dạng đa dạng: hình trụ, hình trứng, hình cầu… có nắp hình nón cụt.
+- Có nhiều hình thức mai táng: nguyên táng, hỏa táng, cải táng, táng trẻ em, táng chung.
+- Trong chum thường có đồ tùy táng bằng đá, gốm, sắt, thủy tinh: công cụ, vũ khí, đồ trang sức…
+- Điều này thể hiện tổ chức xã hội quy củ, tín ngưỡng về thế giới bên kia và sự trân trọng với người đã khuất.
+- Mộ chum Tam Mỹ (1976) và mộ chum Tabhing (1986) là những phát hiện sớm và quan trọng tại khu vực Quảng Nam – Đà Nẵng.
+
 `;
 
 // #########################################################
@@ -231,3 +244,48 @@ userInput.addEventListener("keypress", function (e) {
         handleUserInput();
     }
 });
+
+// ... (Giữ nguyên toàn bộ code cũ ở trên) ...
+
+// ============================================================
+// TÍNH NĂNG: GỢI Ý CÂU HỎI (SUGGESTION CHIPS)
+// ============================================================
+
+// 1. Danh sách các câu hỏi mẫu
+const sampleQuestions = [
+    "Giờ mở cửa bảo tàng?",
+    "Địa chỉ bảo tàng ở đâu?",
+    "Giới thiệu về Mộ chum",
+    "Tóm tắt văn hóa Sa Huỳnh",
+    "Súng thần công là gì?",
+    "Lịch sử tên gọi Đà Nẵng"
+];
+
+// 2. Hàm tạo nút gợi ý
+function createSuggestionChips() {
+    const suggestionArea = document.getElementById('suggestion-area');
+    
+    // Xóa nội dung cũ (nếu có)
+    suggestionArea.innerHTML = '';
+
+    sampleQuestions.forEach(question => {
+        const btn = document.createElement('button');
+        btn.textContent = question;
+        btn.className = 'suggestion-chip';
+        
+        // Khi bấm vào nút
+        btn.onclick = () => {
+            // 1. Điền câu hỏi vào ô nhập
+            const userInput = document.getElementById('user-input');
+            userInput.value = question;
+            
+            // 2. Tự động bấm nút Gửi luôn
+            handleUserInput();
+        };
+        
+        suggestionArea.appendChild(btn);
+    });
+}
+
+// 3. Chạy hàm tạo nút ngay khi web tải xong
+document.addEventListener('DOMContentLoaded', createSuggestionChips);
