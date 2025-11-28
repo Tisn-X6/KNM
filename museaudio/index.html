@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuseAUDIO</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <img src="logoAUDIO.png" alt="MuseAudio Logo" class="header-logo">
+            <h1>MuseAUDIO</h1>
+        </header>
+
+        <div class="audio-list">
+
+            <div class="audio-card">
+                <img src="mộ chum.png" alt="Mộ chum" class="artifact-img">
+                <div class="card-content">
+                    <h3>Mộ chum</h3>
+                    <div class="player-controls">
+                        <span class="time current">0:00</span>
+                        
+                        <button class="play-btn" onclick="togglePlay(this, 'audio1')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        
+                        <span class="time total">0:36</span>
+                    </div>
+                    <audio id="audio1" src="Mộ chum.mp3"></audio> 
+                    <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+            </div>
+
+            <div class="audio-card">
+                <img src="khuyên tai.png" alt="Khuyên tai" class="artifact-img">
+                <div class="card-content">
+                    <h3>Khuyên tai hai đầu thú</h3>
+                    <div class="player-controls">
+                        <span class="time current">0:00</span>
+                        <button class="play-btn" onclick="togglePlay(this, 'audio2')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <span class="time total">0:27</span>
+                    </div>
+                    <audio id="audio2" src="Khuyên tai 2 đầu thú.mp3"></audio>
+                    <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+            </div>
+
+            <div class="audio-card">
+                <img src="rìu đá.png" alt="Rìu đá" class="artifact-img">
+                <div class="card-content">
+                    <h3>Rìu đá, cuốc đá</h3>
+                    <div class="player-controls">
+                        <span class="time current">0:00</span>
+                        <button class="play-btn" onclick="togglePlay(this, 'audio3')">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <span class="time total">0:30</span>
+                    </div>
+                    <audio id="audio3" src="Rìu đá, cuốc đá.mp3"></audio>
+                    <div class="progress-bar"><div class="progress-fill"></div></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
