@@ -50,6 +50,7 @@ header {
     padding: 15px 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     z-index: 10;
+    position: relative ;
 }
 
 /* Logo tròn nhỏ */
@@ -70,8 +71,8 @@ header h1 {
 }
 
 /* Ẩn các icon thừa */
-.menu-icon, .search-icon, header i { display: none; }
-
+/*.menu-icon, .search-icon, header i { display: none; } */
+.menu-icon { display: none; }
 /* 4. DANH SÁCH THẺ (CĂN GIỮA) */
 .audio-list {
     flex-grow: 1;
@@ -192,4 +193,20 @@ header h1 {
     width: 0%;
     background-color: white;
     transition: width 0.1s linear;
+}
+
+/* ICON KÍNH LÚP (BÊN TRÁI) */
+.search-icon {
+    position: absolute;  /* Tuyệt đối so với Header */
+    left: 20px;          /* <-- QUAN TRỌNG: Căn sang trái 20px */
+    top: 50%;            /* Đặt ở giữa theo chiều dọc */
+    transform: translateY(-50%); /* Căn chỉnh chính xác giữa tâm dọc */
+    
+    font-size: 1.2rem;   
+    cursor: pointer;     
+    opacity: 0.9;
+}
+
+.search-icon:active {
+    opacity: 0.5;
 }

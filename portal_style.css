@@ -70,25 +70,26 @@ body {
     color: #333; /* Chữ màu đen/xám đậm cho dễ đọc trên nền kính */
     
     /* Hiệu ứng kính mờ (Glassmorphism) */
-    background-color: rgba(255, 255, 255, 0.2); /* Trắng trong suốt */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: transparent; /* Trắng trong suốt */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
     
     width: 100%; /* Rộng 100% container */
-    padding: 15px 20px;
+    padding: 10px 20px;
     border-radius: 50px; /* Bo tròn hình viên thuốc */
     
     display: flex;
     align-items: center; /* Căn giữa icon và chữ */
-    gap: 20px;
+    gap: 25px;
     
-    transition: transform 0.2s, background-color 0.2s;
+    transition: transform 0.2s, opacity 0.2s;
 }
 
 .app-choice:hover {
-    background-color: rgba(255, 255, 255, 0.4);
-    transform: scale(1.02);
+    background-color: transparent;
+    transform: scale(1.05);
+    opacity: 0.8;
 }
 
 /* Vòng tròn bao quanh Logo */
