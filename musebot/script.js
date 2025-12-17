@@ -178,7 +178,7 @@ D.3: Mộ chum
 // Bước 2: Khởi tạo mô hình
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({
-    model: "gemini-3-pro-preview", // <-- TÊN ĐÚNG 100% TỪ HÌNH ẢNH CỦA BẠN
+    model: "gemini-2.5-flash-lite", // <-- TÊN ĐÚNG 100% TỪ HÌNH ẢNH CỦA BẠN
     // Không dùng systemInstruction ở đây
 });
 
