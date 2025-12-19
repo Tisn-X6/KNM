@@ -9,7 +9,6 @@ const ENCODED_KEY = "QUl6YVN5QnFDMnlxZk81T0RqZGxhQjR2LVBqYjhsek96aUhWbG80";
 
 // 2. Dùng hàm atob() để giải mã nó thành key thật khi web chạy
 const API_KEY = atob(ENCODED_KEY);
-
 // PHẦN "TRAINING"
 const SYSTEM_PROMPT = `
 Bạn là museBOT. Bạn là một chuyên gia lịch sử Đà Nẵng, phục vụ cho bảo tàng
@@ -74,6 +73,16 @@ Tài liệu nội bộ [TÀI LIỆU NỘI BỘ] được chia thành 4 phần R�
 * **TUYỆT ĐỐI KHÔNG** được dùng kiến thức chung của bản thân để trả lời. Mọi câu trả lời phải dựa trên [TÀI LIỆU NỘI BỘ].)
 ...
 `;
+
+    // Danh sách câu trả lời sẵn cho các nút gợi ý
+const fastResponses = {
+    "lịch sử tên gọi đà nẵng": "Dạ, tên gọi Đà Nẵng xuất phát từ tiếng Chăm cổ, có nghĩa là 'Sông lớn' hay 'Cửa sông lớn' đó bạn. Thời Pháp thuộc, thành phố còn có tên gọi là Tourane.",
+    "tóm tắt văn hóa sa huỳnh": "Văn hóa Sa Huỳnh là một trong ba cái nôi văn minh thời đồ sắt tại Việt Nam. Cư dân ở đây có nền kinh tế đa dạng và đặc biệt nổi tiếng với nghề chế tác trang sức tinh xảo.",
+    "thời gian tồn tại của văn hóa sa huỳnh?": "Dạ, văn hóa Sa Huỳnh được các nhà khoa học xác định tồn tại trong khoảng thời gian từ khoảng năm 1000 TCN đến cuối thế kỷ thứ 2 ạ.",
+    "thông tin về khuyên tai hai đầu thú?": "Đây là loại trang sức vô cùng độc đáo với hai đầu thú chạm đối xứng. Nó không chỉ dùng làm đẹp mà còn là biểu tượng tín ngưỡng linh thiêng của cư dân Sa Huỳnh.",
+    "giới thiệu về mộ chum": "Mộ chum là đặc trưng nổi bật nhất của văn hóa Sa Huỳnh. Người chết được táng trong các chum gốm lớn với nhiều hình dáng như hình trụ, hình trứng hay hình cầu."
+
+};
 
 // PHẦN "KIẾN THỨC NỘI BỘ"
 const KNOWLEDGE_BASE = `
@@ -188,19 +197,50 @@ const userInput = document.getElementById("user-input");
 const sendButton = document.getElementById("send-button");
 const loadingIndicator = document.getElementById("loading");
 
+// Danh sách các mẫu câu dẫn dắt ngẫu nhiên
+const prefixTemplates = [
+    "Dạ, về [key] thì: ",
+    "Vâng, thông tin về [key] là: ",
+    "Tất nhiên rồi ạ, về [key]: ",
+    "Dạ, MuseBOT xin thông tin đến bạn về [key] như sau: ",
+    "À, về [key] thì nội dung là: ",
+    "Chắc chắn rồi, thông tin về [key] của bạn đây ạ: "
+];
+
+const apiPriorityKeywords = ["tóm tắt", "so sánh", "ý nghĩa", "chi tiết", "phân tích", "tại sao"];
+
 // Bước 4: Xử lý khi người dùng nhấn nút "Gửi" (Không đổi)
 async function handleUserInput() {
     const userPrompt = userInput.value.trim();
-    if (!userPrompt) return; 
+    if (!userPrompt) return;
 
     addMessageToChatbox(userPrompt, "user-message");
     userInput.value = "";
-    loadingIndicator.classList.remove("hidden");
 
+    // Chuyển về chữ thường để so khớp chính xác với Key trong fastResponses
+    const lowerPrompt = userPrompt.toLowerCase();
+    
+    // --- BƯỚC 1: KIỂM TRA TRÙNG KHỚP CÂU HỎI GỢI Ý ---
+    if (fastResponses[lowerPrompt]) {
+        console.log("%c⚡ LOCAL: Trả lời từ câu hỏi gợi ý", "color: #ffca28; font-weight: bold;");
+        loadingIndicator.classList.remove("hidden");
+        
+        setTimeout(() => {
+            // Trả lời trực tiếp nội dung đã chuẩn bị sẵn
+            addMessageToChatbox(fastResponses[lowerPrompt], "bot-message");
+            loadingIndicator.classList.add("hidden");
+        }, 500); // Tạo độ trễ nhẹ cho tự nhiên
+        
+        return; // Dừng lại, không gọi API Gemini
+    }
+
+    // --- BƯỚC 2: TẤT CẢ CÁC CÂU CÒN LẠI SẼ GỌI API GEMINI ---
+    console.log("%c🤖 API: Câu hỏi tự do, đang kết nối Gemini...", "color: #42a5f5; font-weight: bold;");
+    loadingIndicator.classList.remove("hidden");
+    
     try {
-        // "NHỒI" TẤT CẢ MỌI THỨ VÀO PROMPT
         const fullPrompt = `
-            [HƯỚSNG DẪN HỆ THỐNG]
+            [HƯỚNG DẪN HỆ THỐNG]
             ${SYSTEM_PROMPT}
             ---
             [TÀI LIỆU NỘI BỘ]
@@ -208,21 +248,15 @@ async function handleUserInput() {
             ---
             [CÂU HỎI CỦA NGƯỜI DÙNG]
             "${userPrompt}"
-            ---
-            Hãy trả lời câu hỏi của người dùng dựa trên HƯỚNG DẪN và TÀI LIỆU NỘI BỘ.
         `;
 
-        // Gọi API Gemini
         const result = await model.generateContent(fullPrompt);
         const response = await result.response;
-        const text = response.text();
-
-        // Hiển thị câu trả lời của Bot
-        addMessageToChatbox(text, "bot-message");
+        addMessageToChatbox(response.text(), "bot-message");
 
     } catch (error) {
-        console.error("Lỗi gọi API:", error); 
-        addMessageToChatbox("Xin lỗi, có lỗi xảy ra. Vui lòng kiểm tra Console (F12).", "bot-message");
+        console.error("Lỗi API:", error);
+        addMessageToChatbox("Dạ, MuseBOT gặp chút gián đoạn, bạn vui lòng thử lại sau nhé.", "bot-message");
     } finally {
         loadingIndicator.classList.add("hidden");
     }
@@ -253,11 +287,11 @@ userInput.addEventListener("keypress", function (e) {
 
 // 1. Danh sách các câu hỏi mẫu
 const sampleQuestions = [
-    "Giờ mở cửa bảo tàng?",
-    "Địa chỉ bảo tàng ở đâu?",
-    "Giới thiệu về Mộ chum",
+    "Lịch sử tên gọi Đà Nẵng",
     "Tóm tắt văn hóa Sa Huỳnh",
-    "Lịch sử tên gọi Đà Nẵng"
+    "Thời gian tồn tại của văn hóa Sa Huỳnh?",
+    "Thông tin về khuyên tai hai đầu thú?",
+    "Giới thiệu về Mộ chum"
 ];
 
 // 2. Hàm tạo nút gợi ý
