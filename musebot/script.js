@@ -5,7 +5,7 @@ import { GoogleGenerativeAI } from "https://cdn.jsdelivr.net/npm/@google/generat
 
 // #########################################################
 // 1. Dán chuỗi mã hóa bạn vừa copy ở Bước 1 vào đây
-const ENCODED_KEY = "QUl6YVN5QnFDMnlxZk81T0RqZGxhQjR2LVBqYjhsek96aUhWbG80";
+const ENCODED_KEY = "QUl6YVN5Q1BPRV83SmtIaVU3bk41eXNDSDVFQ0VWVGw5N2ZOTmFN";
 
 // 2. Dùng hàm atob() để giải mã nó thành key thật khi web chạy
 const API_KEY = atob(ENCODED_KEY);
