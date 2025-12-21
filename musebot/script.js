@@ -318,6 +318,13 @@ function createSuggestionChips() {
         
         suggestionArea.appendChild(btn);
     });
+
+    setTimeout(() => {
+        const chatBox = document.getElementById('chat-box');
+        if (chatBox) {
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+    }, 100)
 }
 
 // 3. Chạy hàm tạo nút ngay khi web tải xong

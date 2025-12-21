@@ -218,6 +218,11 @@ h1 {
         border-radius: 0;
         box-shadow: none;
         
+        display: flex;
+        flex-direction: column; 
+    
+    /* 3. Cấm thanh cuộn ở khung tổng (chỉ cuộn trong khung chat con) */
+        overflow: hidden;
         /* --- THAY ĐỔI 1: Màu nền cực nhạt (0.1) --- */
         /* Nó chỉ là một lớp màng rất mỏng để phân biệt nhẹ */
         background-color: rgba(245, 239, 230, 0.1); 
@@ -230,8 +235,21 @@ h1 {
 
     /* 3. Hộp tin nhắn */
     #chat-box {
-        background-color: transparent;
+        /* 1. flex-grow: 1 -> Chiếm toàn bộ khoảng trống còn thừa */
+        flex-grow: 1;
+    
+        /* 2. QUAN TRỌNG NHẤT: Cho phép nó thu nhỏ lại nếu cần */
+        min-height: 0; 
+    
+        /* 3. Chỉ cuộn nội dung bên trong nó */
+        overflow-y: auto; 
+    
+        /* Padding vừa phải, không cần padding khổng lồ nữa vì bố cục đã chuẩn */
         padding: 15px;
+        padding-bottom: 20px; 
+    
+        /* Giữ nền trong suốt */
+        background-color: transparent;
     }
     
     /* 4. Khu vực nhập liệu */
@@ -311,3 +329,45 @@ h1 {
     color: white;
     transform: translateY(-2px); /* Nhảy lên nhẹ khi di chuột */
 }
+/* ==================================================== */
+/* --- BƯỚC 3: MÃ LỆNH "ĐỔ BÊ TÔNG" (CHỐNG CO RÚT) --- */
+/* ==================================================== */
+
+/* Gom nhóm các phần "cứng": Header, Gợi ý, Ô nhập */
+/* Lệnh flex-shrink: 0 nghĩa là: CẤM TUYỆT ĐỐI KHÔNG ĐƯỢC CO LẠI */
+#header, 
+#suggestion-area, 
+#input-area {
+    flex-shrink: 0 !important; /* Thêm !important để chắc chắn 100% */
+}
+
+/* Tinh chỉnh riêng cho Gợi ý (để nó nằm đẹp trên ô nhập) */
+#suggestion-area {
+    padding: 10px 15px;
+    z-index: 5; 
+    /* Đảm bảo chiều cao tối thiểu cho nút không bị cắt */
+    min-height: 50px; 
+}
+
+/* Tinh chỉnh riêng cho Ô nhập liệu (để nó luôn nổi lên trên) */
+#input-area {
+    z-index: 10;
+    /* Làm nền đục hơn chút để che chữ khi tin nhắn trôi xuống dưới */
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+/* @media screen and (max-width: 768px) {
+
+    body {
+        display: block;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #chat-container {
+        position: fixed;
+        inset: 0;
+        height: 100vh;
+        max-height: 100vh;
+    }
+} */
